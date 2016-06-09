@@ -14,6 +14,14 @@ Plugin 'fatih/vim-go'
 
 Plugin 'flazz/vim-colorschemes'
 
+" Plugin 'scrooloose/nerdTree'
+
+Plugin 'derekwyatt/vim-scala'
+
+Bundle 'solarnz/thrift.vim'
+
+Plugin 'elzr/vim-json'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -39,7 +47,7 @@ set ruler
 set hlsearch
 set incsearch
 colo solarized
-
+set colorcolumn=100
 
 
 ca WQ wq
