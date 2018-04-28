@@ -22,6 +22,8 @@ Bundle 'solarnz/thrift.vim'
 
 Plugin 'elzr/vim-json'
 
+Plugin 'tpope/vim-fugitive'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -55,4 +57,20 @@ ca Wq wq
 ca wQ wq
 ca W w
 ca Q q
+ca E Explore
+ca e Explore
+ca gol GoLint
+ca golint GoLint
+ca gof GoFmt
+ca gofmt GoFmt
+ca god GoDef
+ca godef GoDef
+ca goi GoInfo
+ca goinfo GoInfo
+ca goct GoCoverageToggle
+ca gocoveragetoggle GoCoverageToggle
+ca gocc GoCoverageClear
+ca gocoverageclear GoCoverageClear
+ca git Git
 
+autocmd BufWritePre * %s/\s\+$//e
