@@ -136,6 +136,7 @@ else \
 fi)'
 
 
+export GOPATH=$HOME/go
 export PATH=/usr/local/opt/python2/libexec/bin:/Users/kelvinfann/.nvm/v0.10.32/bin:/Users/kelvinfann/bin:/usr/local/sbin:/usr/local/bin:/Users/kelvinfann/bin:/usr/local/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/munki:/Users/kelvinfann/gocode/bin:/Users/kelvinfann/gocode/bin
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2
 export HOMEBREW_NO_SANDBOX=1
