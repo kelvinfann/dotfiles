@@ -27,6 +27,8 @@ goclone () {
   git clone gitolite@code.uber.internal:$1 $GOPATH/src/code.uber.internal/$1 --recursive
 }
 
+ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+
 copen () {
   if [ -n "$1" ]; then
     open -a "/Applications/Google Chrome.app" 'http://'$1''
