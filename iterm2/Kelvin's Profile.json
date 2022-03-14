@@ -1,6 +1,4 @@
 {
-"Profiles": [
-{
   "Working Directory" : "\/Users\/kelvin.fann",
   "Prompt Before Closing 2" : false,
   "Selected Text Color" : {
@@ -300,7 +298,7 @@
     "Blue Component" : 0.18431372549019609,
     "Green Component" : 0.19607843137254902
   },
-  "Name" : "Default",
+  "Name" : "Kelvin's Profile",
   "Blinking Cursor" : false,
   "Guid" : "FE9CC1EB-13BC-4660-9E7B-CFC9FC49992A",
   "Idle Code" : 0,
@@ -387,6 +385,4 @@
     "Blue Component" : 0.50980392156862742,
     "Green Component" : 0.21176470588235294
   }
-}
-]
 }
