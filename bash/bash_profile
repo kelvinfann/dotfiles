@@ -1,5 +1,5 @@
 # export ZONEINFO=/usr/local/Cellar/go/1.8/libexec/lib/time/zoneinfo.zip
-. .z.git/z.sh
+[ -f "$HOME/.z.git/z.sh" ] && . "$HOME/.z.git/z.sh"
 
 # Fixing Functionality
 #if [ -f /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash ]; then
@@ -27,7 +27,12 @@ goclone () {
   git clone gitolite@code.uber.internal:$1 $GOPATH/src/code.uber.internal/$1 --recursive
 }
 
-ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+gitbranchclean() {
+  git branch | grep -v "main" | xargs git branch -D
+}
+
+# Create subl symlink only if it doesn't already exist
+[ ! -L /usr/local/bin/subl ] && ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl 2>/dev/null
 
 copen () {
   if [ -n "$1" ]; then
@@ -36,6 +41,26 @@ copen () {
     open -a "/Applications/Google Chrome.app" 'http://www.google.com'
   fi
 }
+
+sshjava () {
+  ssh kelvinfann.devpod-us-or
+}
+
+
+sshgo () {
+  ssh kelvinfann-go.devpod-us-or
+}
+
+claude_setup() {
+  gcloud auth application-default login;
+  gcloud auth application-default set-quota-project progsys-genai-198685;
+  export ANTHROPIC_VERTEX_PROJECT_ID="progsys-genai-198685";
+  export CLAUDE_CODE_USE_VERTEX=1;
+  export CLOUD_ML_REGION="us-east5";
+}
+
+
+
 
 # Appearance
 
@@ -148,21 +173,33 @@ Jobs="\j"
 #eval "$(direnv hook bash)"
 
 # css java
-export JAVA_HOME=/usr/local/lib/java/Contents/Home
+# export JAVA_HOME=/usr/local/lib/java/Contents/Home
 # css
-export GOPROXY=https://proxy.golang.org,https://artifactory.cloudkitchens.internal/artifactory/api/go/go,direct
-export GOPRIVATE=css.com
-export GONOSUMDB=css.com
-export GONOPROXY=none
-export PATH=${KREW_ROOT:-$HOME/.krew}/bin:$PATH
-export PATH=/Users/kelvin.fann/patched-php:$PATH
+# export GOPROXY=https://proxy.golang.org,https://artifactory.cloudkitchens.internal/artifactory/api/go/go,direct
+# export GOPRIVATE=css.com
+# export GONOSUMDB=css.com
+# export GONOPROXY=none
+# export PATH=${KREW_ROOT:-$HOME/.krew}/bin:$PATH
+# export PATH=/Users/kelvin.fann/patched-php:$PATH
+#
+# uber java
+unset JAVA_HOME
+export JAVA8_HOME="$(/usr/libexec/java_home -v1.8)"
+export JAVA11_HOME="$(/usr/libexec/java_home -v11)"
+alias jdk_11='export JAVA_HOME="$JAVA11_HOME" && export PATH="$JAVA_HOME/bin:$PATH"'
+alias jdk_8='export JAVA_HOME="$JAVA8_HOME" && export PATH="$JAVA_HOME/bin:$PATH"'
+jdk_11 # Use jdk 11 as the default jdk
+
+autoload -Uz compinit
+compinit
+
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
-sudo ifconfig lo0 alias 192.168.99.100
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+#sudo ifconfig lo0 alias 192.168.99.100
 
-. /Users/kelvin.fann/Projects/monorepo/user-content/derek.prothro/scripts/grpcui.sh
-
-#[ -r /Users/kelvinfann/.profile_lda ] && . /Users/kelvinfann/.profile_lda
+[ -r /Users/kelvinfann/.profile_lda ] && . /Users/kelvinfann/.profile_lda
+source /Users/kelvinfann/.gradle/jv1/.gradle/caches/okbuck/buck-completion.bash
+export PATH="~/.local/bin:$PATH"

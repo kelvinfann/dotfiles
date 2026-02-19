@@ -21,3 +21,13 @@ fi
 ln -nfs $CURR_DIR/z ~/.z.git
 ln -nfs $CURR_DIR/vim/vimrc ~/.vimrc
 ln -nfs $CURR_DIR/bash/bash_profile ~/.bash_profile
+
+# Claude Code config
+mkdir -p ~/.claude
+ln -nfs $CURR_DIR/claude/CLAUDE.md ~/.claude/CLAUDE.md
+ln -nfs $CURR_DIR/claude/settings.json ~/.claude/settings.json
+
+# Claude Code memory (project-level, needs the right path for this machine)
+CLAUDE_PROJECT_DIR=~/.claude/projects/-$(echo $HOME | tr '/' '-' | sed 's/^-//')
+mkdir -p "$CLAUDE_PROJECT_DIR/memory"
+ln -nfs $CURR_DIR/claude/memory/MEMORY.md "$CLAUDE_PROJECT_DIR/memory/MEMORY.md"

@@ -1,0 +1,1 @@
+- always reference file names with their full path from the project root
