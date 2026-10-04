@@ -1,0 +1,6 @@
+interface:
+  display_name: "New Project Work (npw)"
+  short_description: "Orient in a coding project and agree on a plan"
+  default_prompt: "Use $npw <project-folder> [task] to inspect project guidance and propose a plan for approval."
+policy:
+  allow_implicit_invocation: true
