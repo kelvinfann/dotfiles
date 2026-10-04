@@ -32,7 +32,7 @@ Implement the agreed plan using project instructions and guideline.md. Do not as
 
 The default completion goal for coding changes is a pull request, not local edits alone. Include branch, commit, push, and PR creation in the proposed plan. Once that plan is approved, carry those steps through without another routine approval question unless the user restricts delivery or client permissions require it.
 
-Use a task branch and the repository's existing PR conventions and template. Reuse the task's existing branch/PR when appropriate; otherwise create a branch from the agreed base without discarding existing work. Stage only task-related changes, commit them, push the branch, and create or update the PR. Never force-push or merge merely to satisfy this delivery goal.
+For Kelvin's work, prefix task branch names and PR titles with `kelvinfann/`. For example, use branch `kelvinfann/npw-project-work` and title `kelvinfann/Add shared npw project workflow`. Keep the repository's PR template and other conventions while applying this naming preference. Reuse the task's existing branch/PR when appropriate; otherwise create a branch from the agreed base without discarding existing work. Stage only task-related changes, commit them, push the branch, and create or update the PR. Never force-push or merge merely to satisfy this delivery goal.
 
 Review the final diff and run the planned checks before delivery. Describe the actual change and validation in the PR; if checks are blocked or fail, disclose that and use a draft when appropriate rather than imply readiness. Attach the PR to the current chat when the client supports it.
 
