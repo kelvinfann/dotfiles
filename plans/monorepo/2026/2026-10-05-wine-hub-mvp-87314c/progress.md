@@ -1,6 +1,6 @@
 # Progress
 
-- Updated: 2026-10-05T04:35:04Z
+- Updated: 2026-10-05T04:36:16Z
 
 ## Delivered implementation
 
@@ -18,4 +18,4 @@ Passed uv lock check and locked all-package sync; frozen pnpm install and peer c
 
 ## Current state and next action
 
-Implementation PR is open; no merge performed. Archive PR publication and cross-linking are in progress. Local server is running at http://127.0.0.1:8000/. Real Wine Club inventory fetching, CSV persistence and scheduled refreshes require the next feature plan; Kelvin explicitly narrowed this stage to the landing page.
+Implementation PR is open; no merge performed. Archive PR https://github.com/kelvinfann/dotfiles/pull/2 is open and cross-linked; both PRs are attached to this chat. Both task branches are pushed, and final working-tree checks are clean. Local server is running at http://127.0.0.1:8000/. Real Wine Club inventory fetching, CSV persistence and scheduled refreshes require the next feature plan; Kelvin explicitly narrowed this stage to the landing page.

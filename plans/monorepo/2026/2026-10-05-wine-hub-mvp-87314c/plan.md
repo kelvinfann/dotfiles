@@ -3,12 +3,12 @@
 - Project: monorepo
 - Repository: https://github.com/kelvinfann/monorepo.git
 - Created: 2026-10-05T03:51:41Z
-- Updated: 2026-10-05T04:35:04Z
+- Updated: 2026-10-05T04:36:16Z
 - Status: pr-open
 - Base branch: main
 - Work branch: kelvinfann/monorepo-foundation
 - Implementation PR: https://github.com/kelvinfann/monorepo/pull/1
-- Archive PR: pending
+- Archive PR: https://github.com/kelvinfann/dotfiles/pull/2
 
 ## Objective and acceptance criteria
 
@@ -66,4 +66,4 @@ Recorded 2026-10-05T04:17:02Z: Kelvin then explicitly narrowed the current imple
 
 ## Delivery checkpoint
 
-2026-10-05T04:35:04Z: Implemented the approved landing-page stage and instruction/workspace setup in monorepo commit f1a4540. Implementation PR #1 is open. The future Wine Club checker remains a documented follow-up. Browser preference: browser-scoped DOM/navigation checks, screenshots only when Kelvin asks; this is persisted in root AGENTS.md.
+2026-10-05T04:35:04Z: Implemented the approved landing-page stage and instruction/workspace setup in monorepo commit f1a4540. Implementation PR #1 and dotfiles archive PR #2 are open and cross-linked. The future Wine Club checker remains a documented follow-up. Browser preference: browser-scoped DOM/navigation checks, screenshots only when Kelvin asks; this is persisted in root AGENTS.md.
