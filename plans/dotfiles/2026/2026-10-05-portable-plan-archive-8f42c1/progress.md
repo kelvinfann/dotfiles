@@ -7,7 +7,8 @@ Archive instructions, plan template, npw workflow changes, and this plan are imp
 ## Decisions
 
 - Reuse the current ~/Project/dotfiles checkout; no move is needed.
-- Prefer ~/dotfiles or /tmp/kelvinfann-dotfiles only when another checkout is needed.
+- Ask Kelvin to choose ~/dotfiles, /tmp/kelvinfann-dotfiles, or a custom path if another checkout is needed.
+- Use UTC exclusively for dated directories and record timestamps.
 - Organize plans by project, year, and stable dated task directory.
 - Store plan and continuation records in Markdown; use Git history for revisions.
 - Retain optional Codex UI metadata; this update does not change it.
@@ -23,3 +24,7 @@ None identified.
 ## Next action
 
 Review PR #1 or resume a new approved task from these records. Merge is not part of the authorized task.
+
+## Review changes
+
+- 2026-10-05T03:20:48Z: Addressed both PR comments in archive guidance, skill instructions, and the template. Migrated this record to its first archive commit's UTC date; historical approval times remain unknown. Skill validator, Markdown references, UTC timestamp/directory consistency, and diff whitespace checks passed. The changes are ready for publication to PR #1; end-to-end client invocation remains untested.

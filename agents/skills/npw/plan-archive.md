@@ -7,7 +7,7 @@ Read this when npw starts, and maintain its records throughout the task. The arc
 Use `git@github.com:kelvinfann/dotfiles.git` (or its HTTPS equivalent). Validate a candidate's Git remote before using it; do not assume a folder named dotfiles is the right repository.
 
 1. Reuse the checkout containing this installed skill if its remote matches. Otherwise check a user-provided checkout, `~/dotfiles`, the existing `~/Project/dotfiles`, and `/tmp/kelvinfann-dotfiles`.
-2. If none exists, clone into `~/dotfiles` for persistent local work, or `/tmp/kelvinfann-dotfiles` for a temporary environment where home is unsuitable. Try HTTPS if SSH authentication is unavailable. Do not overwrite an occupied destination, alter unrelated remotes, or move a working checkout just to match the preferred path.
+2. If none exists, ask Kelvin where to clone: `~/dotfiles`, `/tmp/kelvinfann-dotfiles`, or another path he supplies. Wait for his selection before cloning; do not choose based on the environment or assume silence means approval. Reuse an explicit destination already supplied for this task without asking again. Try HTTPS if SSH authentication is unavailable. Do not overwrite an occupied destination, alter unrelated remotes, or move an existing checkout.
 3. Check status before changing branches. Never discard unrelated changes. Inspect relevant remote archive branches/PRs when looking for prior work, without overwriting local files; an unmerged plan may live on a task branch rather than the default branch. Use an isolated Git worktree if necessary to avoid another task's checkout.
 
 If archive access is blocked, report the specific missing access and request it. Keep a provisional plan in an allowed scratch directory, clearly marked unpublished, if useful; do not call it archived or begin implementation without the required approval. Preserve provisional records until they have been saved in dotfiles.
@@ -24,7 +24,7 @@ For example: `plans/dotfiles/2026/2026-10-04-portable-plan-archive-a1b2c3/`.
 
 Use the repository basename as the project slug, lowercase with non-alphanumeric runs replaced by hyphens. Store the credential-free remote URL in plan.md to identify the repository across machines. For non-Git folders, use the folder basename and record that it is a local project. If two different projects collide, use a short stable disambiguator and retain the existing directory mapping; do not add owner directories by default.
 
-Use Kelvin's date/time in America/Los_Angeles. Choose a short task slug and a random six-or-more-character suffix; check that the directory does not exist before creating it. Keep its path fixed when status changes. Create only directories needed for actual plans; no central mutable index or numbered duplicate revisions. Git history records revisions.
+Use UTC exclusively for archive dates and timestamps. Derive the year and dated directory prefix from the UTC date, independent of host timezone. Write metadata, approval, revision, and checkpoint timestamps as ISO 8601 UTC (`YYYY-MM-DDTHH:MM:SSZ`). If an event's time is unknown, mark it unknown rather than inventing a timestamp. Choose a short task slug and a random six-or-more-character suffix; check that the directory does not exist before creating it. Keep its path fixed when status changes. Create only directories needed for actual plans; no central mutable index or numbered duplicate revisions. Git history records revisions.
 
 ## Plan and continuation records
 

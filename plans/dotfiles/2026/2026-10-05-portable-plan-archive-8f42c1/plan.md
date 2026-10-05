@@ -2,8 +2,8 @@
 
 - Project: dotfiles
 - Repository: https://github.com/kelvinfann/dotfiles.git
-- Created: 2026-10-04, America/Los_Angeles
-- Updated: 2026-10-04
+- Created: 2026-10-05T03:03:45Z
+- Updated: 2026-10-05T03:20:48Z
 - Status: pr-open
 - Base branch: master
 - Work branch: kelvinfann/npw-project-work
@@ -20,7 +20,7 @@ Extend the existing Markdown npw skill. Retain plan approval, isolated dependenc
 
 ## Plan
 
-1. Define checkout discovery: reuse the installed skill's checkout or existing verified dotfiles repository; otherwise prefer ~/dotfiles, with /tmp/kelvinfann-dotfiles for temporary environments.
+1. Define checkout discovery: reuse the installed skill's checkout or existing verified dotfiles repository; otherwise ask Kelvin to select ~/dotfiles, /tmp/kelvinfann-dotfiles, or a custom path before cloning.
 2. Organize records under plans/<project>/<year>/<date>-<task>-<unique-id>/ with plan.md and progress.md.
 3. Add archive instructions and a reusable template, including resumability, status, approval history, scoped Git commits, and PR cross-links.
 4. Make plan writing an explicit pre-approval exception; preserve the approval gate for implementation and publication.
@@ -40,5 +40,8 @@ None.
 
 ## Approval and revisions
 
-- 2026-10-04: Kelvin authorized implementation and subsequent PR update with "update the PR after" in response to the proposed archive plan.
-- 2026-10-04: Kelvin clarified "this skill is just for me, so don't worry about other owner". Use project-only directories; retain remote identity as metadata and disambiguate only actual naming collisions.
+- Earlier approval (exact UTC timestamp not captured): Kelvin authorized implementation and subsequent PR update with "update the PR after" in response to the proposed archive plan.
+- Earlier clarification (exact UTC timestamp not captured): Kelvin clarified "this skill is just for me, so don't worry about other owner". Use project-only directories; retain remote identity as metadata and disambiguate only actual naming collisions.
+
+- 2026-10-05T03:20:48Z: Kelvin requested addressing PR review comments: use UTC exclusively and ask for a destination before cloning a missing archive checkout. Updated instructions and template accordingly.
+- 2026-10-05T03:20:48Z: Migrated this previously unmerged record directory to the UTC date of its first archive commit. Created metadata uses that commit timestamp; earlier approval times are explicitly unknown.

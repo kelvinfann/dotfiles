@@ -18,7 +18,7 @@ Invocation: `npw <project-folder> [task]`. Paths with spaces may be quoted. Also
 
 ## Agree on the plan
 
-Read-only inspection may proceed to make the plan concrete. Establishing the verified dotfiles archive checkout and writing plan/progress records there are explicit exceptions, authorized by this workflow; they do not authorize project implementation. Before approval, do not edit project files, install dependencies, change configuration, or run builds/tests/scripts that write files or have external side effects. Include needed mutating investigations in the plan or obtain specific authorization for them.
+Read-only inspection may proceed to make the plan concrete. Establishing the verified dotfiles archive checkout at a destination Kelvin selected and writing plan/progress records there are explicit exceptions, authorized by this workflow; they do not authorize project implementation. Before approval, do not edit project files, install dependencies, change configuration, or run builds/tests/scripts that write files or have external side effects. Include needed mutating investigations in the plan or obtain specific authorization for them.
 
 Present the intended behavior, affected components, implementation steps, verification, PR delivery, and material open decisions. Scale detail to the task, but always propose a plan, even for small changes. Explain repository patterns and ownership when relevant.
 

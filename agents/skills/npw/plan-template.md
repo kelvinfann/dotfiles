@@ -2,8 +2,8 @@
 
 - Project: <project slug>
 - Repository: <credential-free remote URL, or local project>
-- Created: <YYYY-MM-DD, America/Los_Angeles>
-- Updated: <YYYY-MM-DD>
+- Created: <YYYY-MM-DDTHH:MM:SSZ>
+- Updated: <YYYY-MM-DDTHH:MM:SSZ>
 - Status: draft
 - Base branch: <branch or not applicable>
 - Work branch: <kelvinfann/task>
@@ -36,4 +36,4 @@
 
 ## Approval and revisions
 
-<Pending; after approval record date and user wording or accurate description. Record material scope revisions and renewed approval.>
+<Pending; after approval record UTC timestamp and user wording or accurate description. Record material scope revisions and renewed approval.>
