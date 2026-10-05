@@ -3,7 +3,7 @@
 - Project: monorepo
 - Repository: https://github.com/kelvinfann/monorepo.git
 - Created: 2026-10-05T03:51:41Z
-- Updated: 2026-10-05T05:42:34Z
+- Updated: 2026-10-05T05:47:36Z
 - Status: pr-open
 - Base branch: main
 - Work branch: kelvinfann/monorepo-foundation
@@ -73,3 +73,7 @@ Recorded 2026-10-05T04:17:02Z: Kelvin then explicitly narrowed the current imple
 2026-10-05T05:28:03Z: Kelvin requested standardized per-project Makefiles where make serve starts required services. Approved follow-up: backend make serve installs locked dependencies, builds UI and serves one local site; frontend make serve starts API and Vite with coordinated cleanup. Add shared install/build/check targets, frontend API generation, documented port overrides and a browser-free process lifecycle smoke check.
 
 2026-10-05T05:42:34Z: Follow-up delivered in dd4033a. Component run instructions and make serve standard are documented and persisted in agent guidance. Both make check targets, README link/format checks, custom-port startup/HTTP/proxy checks, interrupt cleanup and worker-failure cleanup passed. Existing implementation/archive PRs are updated.
+
+2026-10-05T05:45:13Z: Kelvin requested a monorepo-level Makefile to start each component. Approved routine follow-up: root make serve starts API/Vite by delegating to frontend make serve; serve-backend delegates the compiled site; install/build/check/api dispatch to component owners. Document root targets and override names; verify startup, delegation and cleanup without interrupting the existing preview. Existing PRs will be updated.
+
+2026-10-05T05:47:36Z: Root Makefile delivered in f24e15a and pushed to implementation PR #1. Root make check passed both component checks, make api regenerated without drift, and both root serve modes passed HTTP/port-override/interrupt-cleanup smoke checks. Existing port-8000 preview remained untouched. README and agent/architecture guidance preserve root delegation and component ownership. Archive PR #2 includes this checkpoint.
