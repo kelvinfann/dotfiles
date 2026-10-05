@@ -2,7 +2,7 @@
 
 ## Current checkpoint
 
-Archive instructions, plan template, npw workflow changes, and this plan are implemented and validated. The existing skill installation points at this checkout, so source edits remain shared by Codex and Claude.
+Archive instructions, plan template, npw workflow changes, and this plan are implemented and validated. The archive enhancement was pushed as be63fb6 and PR #1's title and description were updated successfully. The existing skill installation points at this checkout, so source edits remain shared by Codex and Claude.
 
 ## Decisions
 
@@ -22,4 +22,4 @@ None identified.
 
 ## Next action
 
-Publish this checkpoint on the existing branch and update PR #1. Review or continue through that PR; merge is not part of the authorized task.
+Review PR #1 or resume a new approved task from these records. Merge is not part of the authorized task.
