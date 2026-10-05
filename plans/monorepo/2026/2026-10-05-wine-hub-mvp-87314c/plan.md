@@ -3,7 +3,7 @@
 - Project: monorepo
 - Repository: https://github.com/kelvinfann/monorepo.git
 - Created: 2026-10-05T03:51:41Z
-- Updated: 2026-10-05T04:36:16Z
+- Updated: 2026-10-05T05:42:34Z
 - Status: pr-open
 - Base branch: main
 - Work branch: kelvinfann/monorepo-foundation
@@ -22,7 +22,7 @@ This delivery covers shared tooling, instruction/architecture documentation, the
 - Repository-root pnpm workspace registers projects/js/*, owns pnpm-lock.yaml, and defines common JS dependency versions in a catalog. Internal JS dependencies use workspace references. Shared locks do not imply all JS transitive versions are identical.
 - React/TypeScript/Vite frontend; FastAPI and Pydantic backend; strict Python and TypeScript type checking. Node is used for development/build; FastAPI serves built local assets in normal use. Development Vite proxies API requests.
 - Python models own API contracts; OpenAPI generates TypeScript definitions, consumed through a typed client. Check reproducible generation for drift. Backend services own durable state/business rules; frontend owns rendering/interaction. Future HTTP endpoints and cron CLI call the same service layer.
-- Root AGENTS.md is the common coding policy, CLAUDE.md imports it, and nested projects/js/AGENTS.md and projects/py/AGENTS.md contain language-specific commands/guidance. docs/architecture.md owns the design context and deferred feature boundaries. README contains setup/navigation commands.
+- Root AGENTS.md is the common coding policy, CLAUDE.md imports it, and nested projects/js/AGENTS.md and projects/py/AGENTS.md contain language-specific commands/guidance. docs/architecture.md owns the design context and deferred feature boundaries. Component READMEs own setup/run/verification commands; root README is a linked component index.
 - Keep dependencies repository-local or disposable; no system Python modifications, global package installs, sudo pip, pip --user, or uv pip --system. Use terse comments, existing repo conventions, DRY ownership, and abstractions only for actual shared behavior.
 - Plans/progress live in Kelvin's dotfiles archive using UTC timestamps. Implementation and archive branches/PR titles use kelvinfann/. Never force-push or automatically merge.
 
@@ -67,3 +67,9 @@ Recorded 2026-10-05T04:17:02Z: Kelvin then explicitly narrowed the current imple
 ## Delivery checkpoint
 
 2026-10-05T04:35:04Z: Implemented the approved landing-page stage and instruction/workspace setup in monorepo commit f1a4540. Implementation PR #1 and dotfiles archive PR #2 are open and cross-linked. The future Wine Club checker remains a documented follow-up. Browser preference: browser-scoped DOM/navigation checks, screenshots only when Kelvin asks; this is persisted in root AGENTS.md.
+
+2026-10-05T05:24:24Z: Kelvin explicitly requested moving component run instructions out of the general README and into each project. Routine documentation revision within the delivered foundation: add frontend/backend READMEs, keep root as index, and record documentation ownership in AGENTS.md and architecture.md. Existing PRs will be updated.
+
+2026-10-05T05:28:03Z: Kelvin requested standardized per-project Makefiles where make serve starts required services. Approved follow-up: backend make serve installs locked dependencies, builds UI and serves one local site; frontend make serve starts API and Vite with coordinated cleanup. Add shared install/build/check targets, frontend API generation, documented port overrides and a browser-free process lifecycle smoke check.
+
+2026-10-05T05:42:34Z: Follow-up delivered in dd4033a. Component run instructions and make serve standard are documented and persisted in agent guidance. Both make check targets, README link/format checks, custom-port startup/HTTP/proxy checks, interrupt cleanup and worker-failure cleanup passed. Existing implementation/archive PRs are updated.
